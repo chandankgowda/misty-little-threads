@@ -184,8 +184,8 @@
         <div class="tag">Little clothes. Big love.</div>
       </a>
       <nav class="menu">
+        <a href="#shop" onclick="switchCollection('premium')">Premium Silk Dresses</a>
         <a href="#shop" onclick="switchCollection('festival')">Festival Dresses</a>
-        <a href="#shop" onclick="switchCollection('premium')">Premium Silk</a>
         <a href="#how">How it works</a>
         <a href="#about">About</a>
       </nav>
@@ -200,8 +200,8 @@
         <h1>Festive favourites <em>for your little princess.</em></h1>
         <p>Festival Dresses &amp; Premium Silk Dresses for ages 0–3. Traditional baby-girl styles thoughtfully designed for family celebrations.</p>
         <div class="cta-row">
-          <a class="btn-primary" href="#shop" onclick="switchCollection('festival')">Explore festive collection →</a>
-          <a class="btn-secondary" href="#shop" onclick="switchCollection('premium')">See premium silk</a>
+          <a class="btn-primary" href="#shop" onclick="switchCollection('premium')">Explore premium silk →</a>
+          <a class="btn-secondary" href="#shop" onclick="switchCollection('festival')">See festival dresses</a>
         </div>
         <div class="trust">
           <div class="t"><div class="icon">✽</div><div>Premium fabrics</div></div>
@@ -218,8 +218,8 @@
     </div>
   </section>
 
-<div class="collection-switch" id="shop" aria-label="Shop by collection"><div class="container"><div class="switch-title">Explore our collections</div><div class="switch-buttons" role="tablist" aria-label="Clothing collections"><button id="festivalTab" class="collection-tab active" role="tab" aria-selected="true" aria-controls="festival" onclick="switchCollection('festival')">🌸 Festival Dresses</button><button id="premiumTab" class="collection-tab" role="tab" aria-selected="false" aria-controls="premium" onclick="switchCollection('premium')">✦ Premium Silk Dresses</button></div></div></div>
-  <section class="categories" id="festival" role="tabpanel" aria-labelledby="festivalTab">
+<div class="collection-switch" id="shop" aria-label="Shop by collection"><div class="container"><div class="switch-title">Explore our collections — Premium Silk first</div><div class="switch-buttons" role="tablist" aria-label="Clothing collections"><button id="premiumTab" class="collection-tab active" role="tab" aria-selected="true" aria-controls="premium" onclick="switchCollection('premium')">✦ Premium Silk Dresses</button><button id="festivalTab" class="collection-tab" role="tab" aria-selected="false" aria-controls="festival" onclick="switchCollection('festival')">🌸 Festival Dresses</button></div></div></div>
+  <section class="categories hidden" id="festival" role="tabpanel" aria-labelledby="festivalTab">
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">Festival Favourites</div>
@@ -318,7 +318,7 @@
       bagCount += 1;
       document.getElementById('bagCount').textContent = bagCount;
     }
-    if(location.hash==='#premium'||location.hash==='#premiumGrid')switchCollection('premium');
+    if(location.hash==='#festival'||location.hash==='#festivalGrid')switchCollection('festival');else switchCollection('premium');
   </script>
 </body>
 </html>
