@@ -138,7 +138,15 @@
       .swatches{grid-template-columns:repeat(2,1fr)}
       .hero-note{display:none}
     }
-  </style>
+
+.collection-switch{padding:32px 0 20px;background:#fff9f2;text-align:center;border-top:1px solid #f0dfcb}
+.switch-title{font-size:34px;color:#741e33;margin:0 0 15px}
+.switch-buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.collection-tab{padding:15px 27px;background:#fff;border:1.5px solid #c9a16c;border-radius:100px;color:#741e33;font:700 15px Arial,sans-serif;cursor:pointer}
+.collection-tab.active{background:#7e2034;color:white;box-shadow:0 8px 17px #7e203426}
+.collection-tab:focus-visible{outline:3px solid #bd8e37;outline-offset:3px}
+@media(max-width:560px){.collection-tab{padding:12px 14px;font-size:13px}.switch-title{font-size:27px}}
+</style>
 </head>
 <body>
   <div class="topbar">
@@ -159,12 +167,12 @@
         <div class="tag">Little clothes. Big love.</div>
       </a>
       <nav class="menu">
-        <a href="#festival">Festival Dresses</a>
-        <a href="#premium">Premium Silk</a>
+        <a href="#shop" onclick="switchCollection('festival')">Festival Dresses</a>
+        <a href="#shop" onclick="switchCollection('premium')">Premium Silk</a>
         <a href="#how">How it works</a>
         <a href="#about">About</a>
       </nav>
-      <a class="bag" href="#festival">Bag ♡ <span id="bagCount">0</span></a>
+      <a class="bag" href="#shop" onclick="switchCollection('festival')">Bag ♡ <span id="bagCount">0</span></a>
     </div>
   </header>
 
@@ -175,8 +183,8 @@
         <h1>Festive favourites <em>for your little princess.</em></h1>
         <p>From first festivals to family functions, discover traditional baby-girl styles crafted with love — from budget-friendly festive outfits to premium silk statement pieces.</p>
         <div class="cta-row">
-          <a class="btn-primary" href="#festival">Explore festive looks →</a>
-          <a class="btn-secondary" href="#premium">See premium silk</a>
+          <a class="btn-primary" href="#shop" onclick="switchCollection('festival')">Explore festive looks →</a>
+          <a class="btn-secondary" href="#shop" onclick="switchCollection('premium')">See premium silk</a>
         </div>
         <div class="trust">
           <div class="t"><div class="icon">✽</div><div>Premium fabrics</div></div>
@@ -193,7 +201,8 @@
     </div>
   </section>
 
-  <section class="categories" id="festival">
+<div class="collection-switch" id="shop" aria-label="Shop by collection"><div class="container"><div class="switch-title">Explore our collections</div><div class="switch-buttons" role="tablist" aria-label="Clothing collections"><button id="festivalTab" class="collection-tab active" role="tab" aria-selected="true" aria-controls="festival" onclick="switchCollection('festival')">🌸 Festival Dresses</button><button id="premiumTab" class="collection-tab" role="tab" aria-selected="false" aria-controls="premium" onclick="switchCollection('premium')">✦ Premium Silk Dresses</button></div></div></div>
+  <section class="categories" id="festival" role="tabpanel" aria-labelledby="festivalTab">
     <div class="container">
       <div class="section-head">
         <div class="eyebrow">Festival Favourites</div>
@@ -202,26 +211,26 @@
       </div>
       <div class="product-grid">
         <article class="card">
-          <div class="img-wrap"><span class="badge">Bestseller</span><span class="wish">♡</span><img src="assets/royal_blue_checked_dress_with_gold_brocade.png" alt="Royal blue checked festive frock"></div>
+          <div class="img-wrap"><span class="badge">Bestseller</span><span class="wish">♡</span><img src="assets/dress-01.webp" alt="Royal blue checked festive frock"></div>
           <div class="details"><h3>Royal Pattu Frock</h3><p>Bold blue checks with gold border — a classic festive favourite.</p><div class="price-row"><div class="price">₹2,000</div><button class="mini-btn" onclick="addToBag()">Add to bag</button></div></div>
         </article>
         <article class="card">
-          <div class="img-wrap"><span class="badge">Festive</span><span class="wish">♡</span><img src="assets/magenta_gold_embroidered_toddler_ensemble.png" alt="Magenta embroidered festive set"></div>
+          <div class="img-wrap"><span class="badge">Festive</span><span class="wish">♡</span><img src="assets/dress-02.webp" alt="Magenta embroidered festive set"></div>
           <div class="details"><h3>Magenta Festive Set</h3><p>Bright and elegant — perfect for naming ceremonies and family photos.</p><div class="price-row"><div class="price">₹2,000</div><button class="mini-btn" onclick="addToBag()">Add to bag</button></div></div>
         </article>
         <article class="card">
-          <div class="img-wrap"><span class="badge">New</span><span class="wish">♡</span><img src="assets/children_s_red_and_navy_lehenga_set.png" alt="Red and navy lehenga set"></div>
+          <div class="img-wrap"><span class="badge">New</span><span class="wish">♡</span><img src="assets/dress-03.webp" alt="Red and navy lehenga set"></div>
           <div class="details"><h3>Red & Navy Lehenga</h3><p>A playful lehenga look with rich festive colours and timeless charm.</p><div class="price-row"><div class="price">₹2,000</div><button class="mini-btn" onclick="addToBag()">Add to bag</button></div></div>
         </article>
         <article class="card">
-          <div class="img-wrap"><span class="badge">Occasion</span><span class="wish">♡</span><img src="assets/ivory_floral_tulle_flower_girl_dress.png" alt="Ivory floral flower girl dress"></div>
+          <div class="img-wrap"><span class="badge">Occasion</span><span class="wish">♡</span><img src="assets/dress-04.webp" alt="Ivory floral flower girl dress"></div>
           <div class="details"><h3>Ivory Blossom Dress</h3><p>Soft, graceful, and ideal for birthdays or elegant evening functions.</p><div class="price-row"><div class="price">₹2,000</div><button class="mini-btn" onclick="addToBag()">Add to bag</button></div></div>
         </article>
       </div>
     </div>
   </section>
 
-  <section class="premium-band" id="premium">
+  <section class="premium-band hidden" id="premium" role="tabpanel" aria-labelledby="premiumTab">
     <div class="container">
       <div class="premium-layout">
         <div class="premium-blurb">
@@ -281,11 +290,18 @@
   </footer>
 
   <script>
+    function switchCollection(name){
+      const premium=name==='premium';
+      document.getElementById('festival').classList.toggle('hidden',premium);
+      document.getElementById('premium').classList.toggle('hidden',!premium);
+      for(const [id,active] of [['festivalTab',!premium],['premiumTab',premium]]){const btn=document.getElementById(id);btn.classList.toggle('active',active);btn.setAttribute('aria-selected',String(active));}
+    }
     let bagCount = 0;
     function addToBag(){
       bagCount += 1;
       document.getElementById('bagCount').textContent = bagCount;
     }
+    if(location.hash==='#premium'||location.hash==='#premiumGrid')switchCollection('premium');
   </script>
 </body>
 </html>
