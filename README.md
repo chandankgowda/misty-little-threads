@@ -1,33 +1,12 @@
-# Misty Little Threads — Storefront Demo
+# Misty Little Threads — Festival & Premium Silk Collections
 
-A mobile-responsive static storefront prototype for made-to-order baby and toddler outfits, with product-only catalog photographs and a demo shopping cart.
+Static, mobile-first demo for GitHub Pages.
 
-## Run locally
+- **Festival Dresses:** existing occasionwear gallery.
+- **Premium Silk Dresses:** 10 individual cropped AI-assisted styling concepts with original-fabric-inspired insets.
+- Sample list price ₹2,000 per outfit; not a payment-ready e-commerce backend.
+- Individual Premium Silk images: `assets/premium/premium-01.webp` through `premium-10.webp`.
+- GitHub Pages: deploy `main` branch from repository root.
+- **Important:** Generated imagery does not guarantee exact fabric motifs, borders, or final tailoring. Review each fabric with your tailor before accepting customers' orders.
 
-Open `index.html` in Chrome or Edge. All images are included inside the `assets/` folder. No dependencies or build commands are required.
-
-## Deploy with GitHub Pages
-
-1. Create a **new public GitHub repository** named `misty-little-threads`.
-2. Upload all contents of this folder (`index.html`, `assets/`, `README.md`, `.gitignore`) to the repository root and commit.
-3. Open **Settings → Pages → Build and deployment**. Under **Source**, select **Deploy from a branch**, **main**, **/(root)**, then **Save**.
-4. Once deployment finishes, the site should be at `https://YOUR-USERNAME.github.io/misty-little-threads/`.
-
-Alternatively using Git:
-```bash
-git init
-git add .
-git commit -m "Initial Misty Little Threads storefront"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/misty-little-threads.git
-git push -u origin main
-```
-
-## IMPORTANT: Demo only
-
-- Products are listed at **₹2,000 each**, as requested.
-- This is **not** a live e-commerce backend; cart behavior is browser-side only.
-- No payments, customer accounts, secure order processing, inventory management, or GST invoicing are connected.
-- GitHub Pages hosts **static sites only**. Do not collect real customer payment or sensitive information here. For live sales, connect a secure commerce backend such as WooCommerce on suitable managed hosting and deploy that separately.
-- Product images are concept/stylized catalog renders based on reference photos, so confirm actual tailoring details and final product matches before accepting orders.
-- GitHub public repos and Pages sites are publicly accessible; all included images will be public.
+Checkout, customer data storage, Razorpay, order acceptance, shipping and GST features are not implemented in this demo.
