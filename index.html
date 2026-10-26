@@ -1,45 +1,291 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Misty Little Threads — Made with love, made for little ones</title><style>
-:root{--ink:#453c47;--muted:#807582;--pink:#cf7294;--soft:#fff4f6;--cream:#fffcf7;--line:#efdee4;--green:#456d58}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}button,select,textarea,input{font:inherit}button{cursor:pointer}.banner{background:#664b61;color:#fff;text-align:center;padding:8px;font-size:12px;letter-spacing:.04em}.shell{max-width:1180px;margin:auto;padding:0 20px}header{background:#fff;position:sticky;top:0;z-index:5;border-bottom:1px solid var(--line)}nav{display:flex;align-items:center;justify-content:space-between;min-height:76px;gap:16px}.brand{font-family:Georgia,serif;font-size:25px;font-weight:700;color:#8b526d;text-decoration:none}.brand small{display:block;font:10px system-ui;letter-spacing:.17em;text-transform:uppercase;text-align:center;color:var(--muted)}.navlinks{display:flex;gap:25px}.navlinks a{color:var(--ink);text-decoration:none;font-size:13px}.cartBtn,.primary{border:0;border-radius:50px;background:var(--pink);color:#fff;padding:13px 22px;font-weight:650}.cartBtn{background:#fff;color:var(--ink);border:1px solid var(--line);white-space:nowrap}.hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:480px;background:#fbeaf0;overflow:hidden}.heroCopy{padding:76px max(24px,calc((100vw - 1180px)/2));padding-right:24px}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:#ad6884;font-weight:700}.hero h1{font:normal clamp(37px,5vw,66px)/1.08 Georgia,serif;color:#734e66;margin:18px 0}.hero p{max-width:470px;color:#735f6e;font-size:16px}.heroArt{background:radial-gradient(circle at 55% 55%,#fffdf9 0 31%,#eed0dc 32% 33%,transparent 34%),linear-gradient(135deg,#f2d9e7,#eabfd2);display:grid;place-items:center}.heroArt img{width:min(80%,460px);max-height:430px;object-fit:contain;border-radius:16px;box-shadow:0 12px 40px #b67f9a30}.highlights{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:22px 0;color:#785c70;font-size:13px}.section{padding:52px 0}.section h2{font:normal 37px Georgia,serif;text-align:center;margin:5px 0;color:#644b61}.sub{text-align:center;color:var(--muted);margin:0 auto 31px;max-width:600px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:0 6px 24px #b97a9811}.productImage{height:310px;display:grid;place-items:center;position:relative}.productImage img{width:100%;height:100%;object-fit:contain;display:block}.pill{position:absolute;left:15px;top:15px;background:white;border-radius:40px;padding:5px 10px;font-size:11px}.details{padding:19px}.details h3{font:normal 23px Georgia,serif;margin:0 0 4px}.details .price{color:#8b5369;font-weight:750;margin:9px 0 15px}.outline{background:white;border:1px solid #d5a1b6;border-radius:40px;color:#8d5471;padding:10px 16px;width:100%;font-weight:650}.steps{background:#fef0f3}.stepgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:#fff;border-radius:15px;padding:24px}.number{color:var(--pink);font:30px Georgia,serif}.footer{background:#5a4458;color:#f9eaf0;text-align:center;padding:35px 20px}.footer p{opacity:.9}.overlay{display:none;position:fixed;inset:0;background:#20181d9c;z-index:15;padding:20px;overflow:auto;align-items:center;justify-content:center}.overlay.show{display:flex}.modal{background:#fff;width:min(540px,100%);border-radius:22px;padding:25px;max-height:90vh;overflow:auto}.modal h2{font:normal 30px Georgia,serif;margin:0 0 8px}.row{display:flex;justify-content:space-between;align-items:center;gap:15px}.x{background:transparent;border:0;font-size:28px;color:#745b6a}.field{margin:16px 0}.field label{display:block;font-weight:650;font-size:13px;margin-bottom:6px}.field select,.field textarea,.field input{width:100%;border:1px solid #dfd0d9;border-radius:9px;background:white;padding:11px;color:var(--ink)}.field textarea{min-height:75px;resize:vertical}.primary.full{width:100%}.item{border-bottom:1px solid var(--line);padding:13px 0}.note{font-size:12px;color:var(--muted)}.cartline{display:flex;justify-content:space-between;gap:10px}.remove{border:0;background:transparent;color:#ae527a;text-decoration:underline}.success{background:#eef7ef;color:#305f3f;border-radius:10px;padding:12px;margin-top:15px}.hidden{display:none}.legal{font-size:12px;color:#947d88;text-align:center;margin:15px 0}@media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr}.heroCopy{padding:55px 25px}.heroArt{height:320px}.grid{grid-template-columns:repeat(2,1fr)}.stepgrid{grid-template-columns:1fr}.hero h1{font-size:48px}}@media(max-width:520px){.shell{padding:0 14px}.brand{font-size:21px}.grid{grid-template-columns:1fr}.hero h1{font-size:41px}.heroArt{height:270px}.section{padding:38px 0}.productImage{height:320px}}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Misty Little Threads — Traditional little outfits, made with love</title>
+  <meta name="description" content="Festival dresses and premium silk outfits for baby girls aged 0–3. Traditional little styles made with love for Karnataka families.">
+  <style>
+    :root{
+      --maroon:#7c1f2f;
+      --maroon-dark:#621523;
+      --gold:#b7893c;
+      --gold-soft:#d9b778;
+      --cream:#fbf4ea;
+      --ivory:#fffaf3;
+      --ink:#4f2b32;
+      --muted:#7a5d62;
+      --line:#ead8c0;
+      --card:#fffdf9;
+      --shadow:0 14px 34px rgba(82,33,42,.10);
+      --radius:22px;
+      --container:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Georgia, "Times New Roman", serif;color:var(--ink);background:
+      radial-gradient(circle at top left, rgba(183,137,60,.07), transparent 24%),
+      linear-gradient(180deg,#fffaf5 0%,#fef8f1 100%)}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:var(--container);margin:0 auto;padding:0 22px}
+    .topbar{background:linear-gradient(90deg,var(--maroon-dark),var(--maroon));color:#f8e8d0;font-size:14px;letter-spacing:.02em}
+    .topbar .container{display:flex;gap:20px;justify-content:space-between;align-items:center;min-height:42px;flex-wrap:wrap}
+    .topbar .items{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+    .topbar .item{display:flex;gap:8px;align-items:center;white-space:nowrap}
+    header.nav{position:sticky;top:0;z-index:40;background:rgba(255,250,244,.95);backdrop-filter: blur(8px);border-bottom:1px solid #f1dfca}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:22px;min-height:88px}
+    .brand{display:flex;flex-direction:column;gap:4px}
+    .brand .name{font-size:27px;font-weight:700;color:var(--maroon);letter-spacing:-.02em}
+    .brand .tag{font-family:Arial,sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+    .menu{display:flex;gap:30px;align-items:center;font-family:Arial,sans-serif}
+    .menu a{font-size:15px;color:#513136}
+    .menu a:hover{color:var(--maroon)}
+    .bag{border:1px solid #e7ccb1;border-radius:999px;padding:12px 18px;font-family:Arial,sans-serif;font-weight:700;background:#fff}
+    .hero-wrap{position:relative;overflow:hidden;border-bottom:1px solid #f1dfca}
+    .hero-wrap:before,.hero-wrap:after{
+      content:"";position:absolute;top:24px;bottom:24px;width:34px;border:2px solid rgba(183,137,60,.35);opacity:.65
+    }
+    .hero-wrap:before{left:12px;border-right:none;border-radius:24px 0 0 24px}
+    .hero-wrap:after{right:12px;border-left:none;border-radius:0 24px 24px 0}
+    .hero{display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:24px;padding:42px 0 34px}
+    .eyebrow{font-family:Arial,sans-serif;text-transform:uppercase;letter-spacing:.24em;font-size:13px;color:#bf8a67;margin-bottom:18px}
+    .hero h1{font-size:76px;line-height:.92;margin:0 0 18px;color:var(--maroon);font-weight:500}
+    .hero h1 em{display:block;color:var(--gold);font-style:normal}
+    .hero p{font-size:21px;line-height:1.55;margin:0 0 28px;max-width:630px;color:#65444a}
+    .cta-row{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+    .btn-primary,.btn-secondary{display:inline-flex;align-items:center;gap:10px;padding:17px 28px;border-radius:999px;font-family:Arial,sans-serif;font-weight:700;transition:.2s transform,.2s opacity}
+    .btn-primary{background:linear-gradient(180deg,#8d2035,#75192b);color:#fff;box-shadow:0 10px 24px rgba(124,31,47,.23)}
+    .btn-secondary{border:1px solid #d8b58e;color:var(--maroon);background:#fff7ef}
+    .btn-primary:hover,.btn-secondary:hover{transform:translateY(-1px);opacity:.96}
+    .trust{display:flex;gap:28px;flex-wrap:wrap;padding-top:4px}
+    .trust .t{display:flex;gap:12px;align-items:center;font-family:Arial,sans-serif;color:#76565b;font-size:15px}
+    .trust .icon{width:40px;height:40px;border-radius:50%;border:1px solid #dabb9e;display:grid;place-items:center;color:var(--gold);background:#fffdf8;font-size:18px}
+    .hero-visual{position:relative;min-height:560px}
+    .hero-visual .halo{position:absolute;inset:0;background:radial-gradient(circle at 50% 40%, rgba(183,137,60,.18), rgba(255,255,255,0) 55%)}
+    .hero-card{position:absolute;inset:0;border-radius:30px;overflow:hidden;background:linear-gradient(180deg,#f8ede1,#fff);box-shadow:var(--shadow)}
+    .hero-card img{width:100%;height:100%;object-fit:cover}
+    .hero-note{position:absolute;right:14px;top:95px;color:rgba(113,82,86,.75);font-size:18px;font-style:italic;text-align:right;line-height:1.35}
+    .categories{padding:18px 0 12px;background:linear-gradient(180deg,#fffaf3 0%,#fff 100%)}
+    .section-head{text-align:center;margin:16px auto 28px}
+    .section-head .eyebrow{margin-bottom:10px;color:#b37c58}
+    .section-head h2{font-size:52px;line-height:1.03;margin:0;color:var(--maroon);font-weight:500}
+    .section-head p{font-size:20px;color:#71545a;margin:10px auto 0;max-width:720px}
+    .pill-nav{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin:6px 0 26px}
+    .pill{padding:12px 18px;border-radius:999px;border:1px solid #ddc2a1;background:#fff;font-family:Arial,sans-serif;font-weight:700;color:#6f313f;cursor:pointer}
+    .pill.active{background:linear-gradient(180deg,#8d2035,#75192b);color:#fff;border-color:#75192b}
+    .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    .card{background:var(--card);border:1px solid #f0dfcb;border-radius:24px;overflow:hidden;box-shadow:0 8px 22px rgba(85,43,51,.08)}
+    .card .img-wrap{position:relative;aspect-ratio: 1/1.05;background:linear-gradient(180deg,#fff,#f8efe5)}
+    .card .img-wrap img{width:100%;height:100%;object-fit:cover}
+    .badge{position:absolute;left:14px;top:14px;background:#fff4ec;color:var(--maroon);padding:7px 12px;border-radius:999px;font:700 12px/1 Arial,sans-serif;border:1px solid #efcfb4}
+    .wish{position:absolute;right:14px;top:14px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.92);font-size:18px;color:#8f6072}
+    .details{padding:18px 18px 20px}
+    .details h3{margin:0 0 6px;font-size:25px;color:#5c2431;font-weight:500}
+    .details p{margin:0 0 14px;color:#7a5b61;font:15px/1.5 Arial,sans-serif;min-height:42px}
+    .price-row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .price{font:700 22px/1 Arial,sans-serif;color:var(--maroon)}
+    .mini-btn{padding:10px 14px;border-radius:999px;border:1px solid #dbbb97;background:#fff7ef;font:700 13px Arial,sans-serif;color:#6f313f}
+    .premium-band{margin-top:50px;padding:52px 0;background:
+      linear-gradient(180deg,rgba(124,31,47,.04), rgba(183,137,60,.05)),
+      linear-gradient(180deg,#fffaf5,#fff7ef)}
+    .premium-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:24px;align-items:center;margin-bottom:22px}
+    .premium-blurb{background:#fffdf8;border:1px solid #efdcc7;border-radius:28px;padding:28px;box-shadow:var(--shadow)}
+    .premium-blurb h3{font-size:42px;line-height:1.02;margin:0 0 12px;color:var(--maroon);font-weight:500}
+    .premium-blurb p{font-size:19px;line-height:1.6;color:#735359;margin:0 0 18px}
+    .swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .swatches img{aspect-ratio:1;border-radius:14px;object-fit:cover;border:2px solid #f0ddc9}
+    .premium-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+    .premium-card{background:#fff;border:1px solid #ecd9c3;border-radius:22px;overflow:hidden;box-shadow:0 7px 18px rgba(84,42,49,.08)}
+    .premium-card img{width:100%;aspect-ratio:4/5;object-fit:cover;background:#f5ebdd}
+    .premium-card .meta{padding:14px 14px 16px}
+    .premium-card h4{margin:0 0 6px;font-size:21px;color:#5f2632;font-weight:500}
+    .premium-card p{margin:0 0 10px;font:14px/1.45 Arial,sans-serif;color:#7b5d63}
+    .premium-card .price{font-size:20px}
+    .how{padding:52px 0}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{background:#fffdf8;border:1px solid #f0dfcb;border-radius:24px;padding:24px;box-shadow:0 6px 15px rgba(84,42,49,.06)}
+    .step .num{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#8d2035,#75192b);color:#fff;font:700 16px Arial,sans-serif;margin-bottom:16px}
+    .step h4{margin:0 0 10px;font-size:22px;color:#5b2631;font-weight:500}
+    .step p{margin:0;font:15px/1.6 Arial,sans-serif;color:#74575c}
+    footer{padding:28px 0 44px;border-top:1px solid #f0dfcb;background:#fffaf3}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+    .footer-inner .small{font:14px/1.6 Arial,sans-serif;color:#7b5b61}
+    .hidden{display:none!important}
+    @media (max-width: 1200px){
+      .hero h1{font-size:64px}
+      .product-grid{grid-template-columns:repeat(2,1fr)}
+      .premium-grid{grid-template-columns:repeat(3,1fr)}
+    }
+    @media (max-width: 900px){
+      .nav-inner{min-height:76px}
+      .menu{display:none}
+      .hero{grid-template-columns:1fr;padding-top:26px}
+      .hero-visual{order:-1;min-height:420px}
+      .hero h1{font-size:52px}
+      .section-head h2{font-size:40px}
+      .premium-layout{grid-template-columns:1fr}
+      .steps{grid-template-columns:repeat(2,1fr)}
+      .premium-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width: 560px){
+      .topbar .container{justify-content:center}
+      .brand .name{font-size:24px}
+      .hero p,.section-head p{font-size:18px}
+      .hero h1{font-size:42px}
+      .product-grid,.premium-grid,.steps{grid-template-columns:1fr}
+      .trust{gap:16px}
+      .swatches{grid-template-columns:repeat(2,1fr)}
+      .hero-note{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div class="items">
+        <div class="item">🚚 <span>Designed for Karnataka celebrations</span></div>
+        <div class="item">💛 <span>Traditional styles for little girls</span></div>
+        <div class="item">✨ <span>Made with love</span></div>
+      </div>
+      <div class="item">ನಮ್ಮ ಪುಟ್ಟ ಕಂದಮ್ಮಗಳಿಗೆ, ನಮ್ಮ ಸಾಂಪ್ರದಾಯಿಕ ಉಡುಪುಗಳು</div>
+    </div>
+  </div>
 
-/* Two clear shopping collections */
-.collection-tabs{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:760px;margin:28px auto 22px}
-.collection-tab{border:1px solid #e5ccd4;background:#fff;color:#6d5262;border-radius:17px;padding:19px 17px;text-align:left;cursor:pointer;transition:box-shadow .2s,border-color .2s,background .2s}
-.collection-tab[aria-selected="true"]{border-color:#c47b93;background:#fff1f5;box-shadow:0 7px 24px #af7e9433}
-.collection-tab.premium[aria-selected="true"]{border-color:#b69652;background:#fff9ea;box-shadow:0 7px 24px #ba9b5733}
-.collection-tab strong{display:block;font:normal 23px Georgia,serif;margin-bottom:4px}
-.collection-tab small{display:block;font-size:12px;color:#756674}
-.collection-head{text-align:center;margin:0 auto 25px;max-width:750px}
-.collection-head h3{font:normal 31px Georgia,serif;margin:7px 0 9px}
-.collection-head p{font-size:14px;color:#786e74;margin:0}
-.collection-head.premium h3{color:#8b682c}
-.collection-head.premium .eyebrow{color:#987b49}
-.productImage{background:#fffaf7!important}
-.productImage img{object-fit:contain}
-.card.premium-card{border-color:#ebd6ad;background:#fffefa}
-.card.premium-card .details .price{color:#926a2b}
-.card.premium-card .pill{background:#fff7e6;color:#836429}
-.collection-disclaimer{max-width:780px;margin:23px auto 0;text-align:center;font-size:12px;line-height:1.6;color:#776b71}
-@media(max-width:650px){.collection-tabs{gap:8px}.collection-tab{padding:14px 12px}.collection-tab strong{font-size:19px}.collection-tab small{font-size:11px}.collection-head h3{font-size:27px}.navlinks{gap:10px}.navlinks a{font-size:11px}}
-</style></head><body><div class="banner">A LITTLE LOVE IN EVERY STITCH · KARNATAKA ONLY · DEMO STORE</div><header><nav class="shell"><a class="brand" href="#home">Misty Little Threads<small>Little clothes. Big love.</small></a><div class="navlinks"><a href="#collection" onclick="activateCollection('festival')">Festival Dresses</a><a href="#collection" onclick="activateCollection('silk')">Premium Silk</a><a href="#how">How it works</a><a href="#about">About</a></div><button class="cartBtn" onclick="openCart()">Bag ♡ <span id="count">0</span></button></nav></header>
-<main><section class="hero" id="home"><div class="heroCopy"><span class="eyebrow">Thoughtfully made for ages 0–3</span><h1>Sweet little outfits,<br>made just for them.</h1><p>Explore festival favourites and premium silk occasionwear, thoughtfully designed for little ones. Pick a look, choose a size, and share your stitching preferences.</p><button class="primary" onclick="document.getElementById('collection').scrollIntoView({behavior:'smooth'})">Browse our dresses ↗</button></div><div class="heroArt" aria-label="Featured blue and gold baby dress"><img src="assets/dress-01.webp" alt="Royal blue and gold frock featured design"></div></section><div class="shell highlights"><span>♡ Soft, baby-friendly designs</span><span>✂ Made to order</span><span>♧ Sizes from 0 to 3 years</span><span>⌂ Crafted with care in Karnataka</span></div>
-<section class="section shell" id="collection"><div class="eyebrow" style="text-align:center">Two collections, one little celebration</div><h2>Find the perfect festive look</h2><p class="sub">Explore our special-occasion outfits or discover premium silk designs, inspired by carefully selected fabric photographs.</p>
-<div class="collection-tabs" role="tablist" aria-label="Shop by collection"><button class="collection-tab" type="button" id="tab-festival" role="tab" aria-selected="true" aria-controls="products" onclick="activateCollection('festival')"><strong>Festival Dresses</strong><small>Beautiful looks for family celebrations</small></button><button class="collection-tab premium" type="button" id="tab-silk" role="tab" aria-selected="false" aria-controls="products" onclick="activateCollection('silk')"><strong>Premium Silk Dresses ✨</strong><small>Luxury-inspired silk occasionwear</small></button></div>
-<div class="collection-head" id="collectionHead" aria-live="polite"><span class="eyebrow">Festival collection</span><h3>Dress up for every celebration</h3><p>Traditional, festive and party-ready designs for ages 0–3.</p></div>
-<div class="grid" id="products" aria-live="polite"></div>
-<p class="collection-disclaimer" id="collectionDisclaimer">Preview catalog only. Product pictures are AI-assisted concepts. Fabric appearance, fit and stitching require confirmation; no actual orders or payments are enabled.</p></section><section class="section steps" id="how"><div class="shell"><h2>Made simple, made special</h2><p class="sub">Every little outfit begins with your choice.</p><div class="stepgrid"><div class="step"><div class="number">01</div><h3>Choose your favourite</h3><p>Browse our designs and find the perfect outfit for your little one.</p></div><div class="step"><div class="number">02</div><h3>Make it yours</h3><p>Select an age-based size and share any special stitching preferences.</p></div><div class="step"><div class="number">03</div><h3>Lovingly prepared</h3><p>We'll confirm the requirements before stitching and arranging delivery.</p></div></div></div></section><section class="section shell" id="about" style="text-align:center"><div class="eyebrow">Our story</div><h2>Tiny moments deserve beautiful memories.</h2><p class="sub">Misty Little Threads is a concept for made-to-order baby clothing created with comfort, care, and a personal touch.</p></section></main><footer class="footer"><div class="brand" style="color:white">Misty Little Threads</div><p>Festival Dresses · Premium Silk Dresses</p><p>Designed for little ones. Made with love.</p><p class="note">Prototype only · AI-assisted product concepts · Actual fabric and stitching may vary · No real orders or payments.</p></footer>
-<div class="overlay" id="customModal" role="dialog" aria-modal="true"><div class="modal"><div class="row"><h2>Customize your outfit</h2><button class="x" onclick="closeModal('customModal')" aria-label="Close">×</button></div><p id="selectedProduct"></p><form id="customForm"><div class="field"><label for="size">Baby's age / size</label><select id="size" required><option value="">Choose a size</option><option>0–6 months</option><option>6–12 months</option><option>12–18 months</option><option>18–24 months</option><option>2–3 years</option></select></div><div class="field"><label for="fabric">Fabric option</label><select id="fabric"><option>As shown (concept)</option><option>Discuss options before stitching</option></select></div><div class="field"><label for="notes">Special instructions (optional)</label><textarea id="notes" maxlength="300" placeholder="Sleeves, fit notes, preferred colours, etc."></textarea></div><p class="note">Demo only. Rendered dresses are AI-assisted design concepts, not photos of stitched products. Pure silk fabric details, borders, fit, price and measurements require confirmation.</p><button class="primary full" type="submit">Add to demo bag</button></form></div></div>
-<div class="overlay" id="cartModal" role="dialog" aria-modal="true"><div class="modal"><div class="row"><h2>Your little bag</h2><button class="x" onclick="closeModal('cartModal')" aria-label="Close">×</button></div><div id="cartItems"></div><div class="row" style="margin:20px 0;font-weight:bold"><span>Sample subtotal</span><span id="subtotal">₹0</span></div><button class="primary full" onclick="demoCheckout()">Continue (demo only)</button><div id="confirmation" class="success hidden">This is a prototype. Checkout and payments are not connected yet.</div><p class="legal">All listed sample prices are ₹2,000 per outfit. Final pricing and availability must be confirmed before orders open. No personal details or payments are collected.</p></div></div>
-<script>
-const products=[{"id":1,"name":"Royal Blue Zari Frock","tag":"Festive favourite","price":2000,"img":"assets/dress-02.webp","category":"festival"},{"id":2,"name":"Lime & Pink Festive Lehenga","tag":"Traditional wear","price":2000,"img":"assets/dress-03.webp","category":"festival"},{"id":3,"name":"Ivory Floral Party Dress","tag":"Party collection","price":2000,"img":"assets/dress-04.webp","category":"festival"},{"id":4,"name":"Ruby Embroidered Kurti Set","tag":"Ethnic collection","price":2000,"img":"assets/dress-05.webp","category":"festival"},{"id":5,"name":"Purple & Pink Brocade Lehenga","tag":"Festive favourite","price":2000,"img":"assets/dress-06.webp","category":"festival"},{"id":6,"name":"Purple Celebration Gown","tag":"Occasion wear","price":2000,"img":"assets/dress-07.webp","category":"festival"},{"id":7,"name":"Red & Navy Festive Lehenga","tag":"Traditional wear","price":2000,"img":"assets/dress-08.webp","category":"festival"},{"id":8,"name":"Color Pop Flutter Frock","tag":"Festive favourites","price":2000,"img":"assets/dress-09.webp","category":"festival"},{"id":9,"name":"Teal Silver Embroidered Frock","tag":"Special moments","price":2000,"img":"assets/dress-10.webp","category":"festival"},{"id":10,"name":"Teal Tulle Bow Dress","tag":"Party collection","price":2000,"img":"assets/dress-11.webp","category":"festival"},{"id":101,"name":"Royal Floral One-Shoulder Frock","tag":"One shoulder","price":2000,"category":"silk","img":"assets/premium/premium-01.webp"},{"id":102,"name":"Gold Zari Silk Puff-Sleeve Frock","tag":"Half sleeves","price":2000,"category":"silk","img":"assets/premium/premium-02.webp"},{"id":103,"name":"Blue Ikat Cowl-Neck Frock","tag":"Cowl neck","price":2000,"category":"silk","img":"assets/premium/premium-03.webp"},{"id":104,"name":"Floral Silk Halter Frock","tag":"Halter neck","price":2000,"category":"silk","img":"assets/premium/premium-04.webp"},{"id":105,"name":"Peach Floral Off-Shoulder Frock","tag":"Off shoulder","price":2000,"category":"silk","img":"assets/premium/premium-05.webp"},{"id":106,"name":"Red-Gold Traditional Lehenga Set","tag":"Lehenga","price":2000,"category":"silk","img":"assets/premium/premium-06.webp"},{"id":107,"name":"Emerald Check Half-Sleeve Frock","tag":"Half sleeves","price":2000,"category":"silk","img":"assets/premium/premium-07.webp"},{"id":108,"name":"Champagne Silk One-Shoulder Frock","tag":"One shoulder","price":2000,"category":"silk","img":"assets/premium/premium-08.webp"},{"id":109,"name":"Royal Blue Silk Lehenga Set","tag":"Lehenga","price":2000,"category":"silk","img":"assets/premium/premium-09.webp"},{"id":110,"name":"Purple Check Halter-Neck Frock","tag":"Halter neck","price":2000,"category":"silk","img":"assets/premium/premium-10.webp"}];let cart=[];let current=null;function dress(p){return `<svg aria-hidden="true" viewBox="0 0 260 270"><path d="M98 36 Q130 54 162 36 L195 76 169 104 190 219 Q130 246 70 219 L91 104 65 76Z" fill="${p.color}" stroke="#9e8097" stroke-width="2"/><path d="M105 40 Q130 76 155 40" stroke="white" stroke-width="9" fill="none"/><path d="M91 110 Q130 127 169 110" stroke="${p.accent}" stroke-width="9" fill="none"/><path d="M102 141 L88 218 M130 145 L130 233 M157 141 L172 218" stroke="${p.accent}" stroke-width="3"/><circle cx="130" cy="110" r="8" fill="white"/></svg>`}let activeCollection='festival';
-function activateCollection(category){
- activeCollection=category==='silk'?'silk':'festival';
- for(const x of ['festival','silk']){const el=document.getElementById('tab-'+x);el.setAttribute('aria-selected',String(x===activeCollection));el.tabIndex=x===activeCollection?0:-1;}
- const isSilk=activeCollection==='silk';const head=document.getElementById('collectionHead');head.className='collection-head'+(isSilk?' premium':'');
- head.innerHTML=isSilk?'<span class="eyebrow">Premium silk collection</span><h3>A little luxury for big moments</h3><p>Ten individual silk-inspired designs in unique necklines and silhouettes, each paired with a source-fabric swatch.</p>':'<span class="eyebrow">Festival collection</span><h3>Dress up for every celebration</h3><p>Traditional, festive and party-ready designs for ages 0–3.</p>';
- document.getElementById('collectionDisclaimer').textContent=isSilk?'AI-assisted silk styling concepts, not photographs of finished garments. Fabric swatches and rendered dresses may differ in motifs, zari placement, colour and texture; please confirm details before ordering. Demo only.':'AI-assisted festive outfit concepts. Actual fabric, fit and stitching may differ from the illustrations. Prices are illustrative and no orders or payments are enabled.';
- const filtered=products.filter(p=>p.category===activeCollection);
- document.getElementById('products').innerHTML=filtered.map(p=>`<article class="card ${isSilk?'premium-card':''}"><div class="productImage"><span class="pill">${isSilk?'Premium Silk · ':''}${p.tag}</span><img loading="lazy" src="${p.img}" alt="${p.name} — AI-assisted outfit concept" onerror="this.style.opacity='.2';this.alt='Preview temporarily unavailable';"></div><div class="details"><h3>${p.name}</h3><div class="note">${isSilk?'Silk styling concept':'Festival outfit'} · Made to order · Ages 0–3</div><div class="price">₹${p.price.toLocaleString('en-IN')} <span class="note">(sample price)</span></div><button class="outline" onclick="customize(${p.id})">Customize this outfit →</button></div></article>`).join('');
- history.replaceState(null,'',location.pathname+location.search+'#'+(isSilk?'premium-silk':'festival-dresses'));
-}
-if(location.hash==='#premium-silk')activateCollection('silk');else activateCollection('festival');function closeModal(id){document.getElementById(id).classList.remove('show')}function customize(id){current=products.find(p=>p.id===id);document.getElementById('selectedProduct').textContent=current.name+' · Sample ₹'+current.price;document.getElementById('customForm').reset();document.getElementById('customModal').classList.add('show')}document.getElementById('customForm').addEventListener('submit',e=>{e.preventDefault();cart.push({product:current,size:document.getElementById('size').value,fabric:document.getElementById('fabric').value,notes:document.getElementById('notes').value});document.getElementById('count').textContent=cart.length;closeModal('customModal');openCart()});function openCart(){document.getElementById('confirmation').classList.add('hidden');renderCart();document.getElementById('cartModal').classList.add('show')}function removeItem(idx){cart.splice(idx,1);document.getElementById('count').textContent=cart.length;renderCart()}function renderCart(){document.getElementById('cartItems').innerHTML=cart.length?cart.map((v,i)=>`<div class="item"><div class="cartline"><strong>${v.product.name}</strong><b>₹${v.product.price}</b></div><div class="note">${v.size} · ${v.fabric}</div>${v.notes?`<div class="note" style="white-space:pre-wrap"></div>`:''}<button class="remove" onclick="removeItem(${i})">Remove</button></div>`).join(''):'<p>Your bag is empty. Explore the collection to add a dress.</p>';document.getElementById('subtotal').textContent='₹'+cart.reduce((s,v)=>s+v.product.price,0).toLocaleString('en-IN')}function demoCheckout(){document.getElementById('confirmation').classList.remove('hidden')}document.querySelectorAll('.overlay').forEach(el=>el.addEventListener('click',e=>{if(e.target===el)el.classList.remove('show')}));document.addEventListener('keydown',e=>{if(e.key==='Escape')document.querySelectorAll('.overlay').forEach(el=>el.classList.remove('show'))});
-</script></body></html>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <div class="name">Misty Little Threads</div>
+        <div class="tag">Little clothes. Big love.</div>
+      </a>
+      <nav class="menu">
+        <a href="#festival">Festival Dresses</a>
+        <a href="#premium">Premium Silk</a>
+        <a href="#how">How it works</a>
+        <a href="#about">About</a>
+      </nav>
+      <a class="bag" href="#festival">Bag ♡ <span id="bagCount">0</span></a>
+    </div>
+  </header>
+
+  <section class="hero-wrap">
+    <div class="container hero">
+      <div class="hero-copy">
+        <div class="eyebrow">For her little big moments</div>
+        <h1>Festive favourites <em>for your little princess.</em></h1>
+        <p>From first festivals to family functions, discover traditional baby-girl styles crafted with love — from budget-friendly festive outfits to premium silk statement pieces.</p>
+        <div class="cta-row">
+          <a class="btn-primary" href="#festival">Explore festive looks →</a>
+          <a class="btn-secondary" href="#premium">See premium silk</a>
+        </div>
+        <div class="trust">
+          <div class="t"><div class="icon">✽</div><div>Premium fabrics</div></div>
+          <div class="t"><div class="icon">♡</div><div>Comfort for little ones</div></div>
+          <div class="t"><div class="icon">❀</div><div>Perfect for every celebration</div></div>
+          <div class="t"><div class="icon">🎁</div><div>Thoughtfully curated</div></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="halo"></div>
+        <div class="hero-card"><img src="assets/hero-theme2-model.webp" alt="Cute toddler girl in traditional festive dress and sunglasses"></div>
+        <div class="hero-note">Tiny traditions<br>Brighter tomorrows ♡</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories" id="festival">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Festival Favourites</div>
+        <h2>Handpicked festive looks</h2>
+        <p>Affordable traditional favourites for middle-class families who want cute, quality outfits for birthdays, functions and habba moments.</p>
+      </div>
+      <div class="product-grid">
+        <article class="card">
+          <div class="img-wrap"><span class="badge">Bestseller</span><span class="wish">♡</span><img src="assets/royal_blue_checked_dress_with_gold_brocade.png" alt="Royal blue checked festive frock"></div>
+          <div class="details"><h3>Royal Pattu Frock</h3><p>Bold blue checks with gold border — a classic festive favourite.</p><div class="price-row"><div class="price">₹2,000</div><button class="mini-btn" onclick="addToBag()">Add to bag</button></div></div>
+        </article>
+        <article class="card">
+          <div class="img-wrap"><span class="badge">Festive</span><span class="wish">♡</span><img src="assets/magenta_gold_embroidered_toddler_ensemble.png" alt="Magenta embroidered festive set"></div>
+          <div class="details"><h3>Magenta Festive Set</h3><p>Bright and elegant — perfect for naming ceremonies and family photos.</p><div class="price-row"><div class="price">₹2,000</div><button class="mini-btn" onclick="addToBag()">Add to bag</button></div></div>
+        </article>
+        <article class="card">
+          <div class="img-wrap"><span class="badge">New</span><span class="wish">♡</span><img src="assets/children_s_red_and_navy_lehenga_set.png" alt="Red and navy lehenga set"></div>
+          <div class="details"><h3>Red & Navy Lehenga</h3><p>A playful lehenga look with rich festive colours and timeless charm.</p><div class="price-row"><div class="price">₹2,000</div><button class="mini-btn" onclick="addToBag()">Add to bag</button></div></div>
+        </article>
+        <article class="card">
+          <div class="img-wrap"><span class="badge">Occasion</span><span class="wish">♡</span><img src="assets/ivory_floral_tulle_flower_girl_dress.png" alt="Ivory floral flower girl dress"></div>
+          <div class="details"><h3>Ivory Blossom Dress</h3><p>Soft, graceful, and ideal for birthdays or elegant evening functions.</p><div class="price-row"><div class="price">₹2,000</div><button class="mini-btn" onclick="addToBag()">Add to bag</button></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="premium-band" id="premium">
+    <div class="container">
+      <div class="premium-layout">
+        <div class="premium-blurb">
+          <div class="eyebrow">Premium Silk Collection</div>
+          <h3>Pure silk styles for precious little moments</h3>
+          <p>For luxury buyers and special-occasion shoppers, this section showcases premium silk-inspired concepts — lehenga styles, halter necks, cowl silhouettes, and more, all designed around a rich festive mood.</p>
+          <a class="btn-primary" href="#premiumGrid">Browse silk looks →</a>
+        </div>
+        <div class="swatches">
+          <img src="assets/premium/premium-01.webp" alt="Premium silk look 1">
+          <img src="assets/premium/premium-02.webp" alt="Premium silk look 2">
+          <img src="assets/premium/premium-03.webp" alt="Premium silk look 3">
+          <img src="assets/premium/premium-04.webp" alt="Premium silk look 4">
+        </div>
+      </div>
+      <div class="premium-grid" id="premiumGrid">
+        <article class="premium-card"><img src="assets/premium/premium-01.webp" alt=""><div class="meta"><h4>Silk Look 01</h4><p>One-shoulder festive concept.</p><div class="price">₹2,000</div></div></article>
+        <article class="premium-card"><img src="assets/premium/premium-02.webp" alt=""><div class="meta"><h4>Silk Look 02</h4><p>Half-sleeve celebration wear.</p><div class="price">₹2,000</div></div></article>
+        <article class="premium-card"><img src="assets/premium/premium-03.webp" alt=""><div class="meta"><h4>Silk Look 03</h4><p>Lehenga-inspired premium style.</p><div class="price">₹2,000</div></div></article>
+        <article class="premium-card"><img src="assets/premium/premium-04.webp" alt=""><div class="meta"><h4>Silk Look 04</h4><p>Cowl-neck silk concept.</p><div class="price">₹2,000</div></div></article>
+        <article class="premium-card"><img src="assets/premium/premium-05.webp" alt=""><div class="meta"><h4>Silk Look 05</h4><p>Traditional party frock.</p><div class="price">₹2,000</div></div></article>
+        <article class="premium-card"><img src="assets/premium/premium-06.webp" alt=""><div class="meta"><h4>Silk Look 06</h4><p>Statement festive silhouette.</p><div class="price">₹2,000</div></div></article>
+        <article class="premium-card"><img src="assets/premium/premium-07.webp" alt=""><div class="meta"><h4>Silk Look 07</h4><p>Elegant half-shoulder styling.</p><div class="price">₹2,000</div></div></article>
+        <article class="premium-card"><img src="assets/premium/premium-08.webp" alt=""><div class="meta"><h4>Silk Look 08</h4><p>Rich festive frock concept.</p><div class="price">₹2,000</div></div></article>
+        <article class="premium-card"><img src="assets/premium/premium-09.webp" alt=""><div class="meta"><h4>Silk Look 09</h4><p>Playful silk celebration look.</p><div class="price">₹2,000</div></div></article>
+        <article class="premium-card"><img src="assets/premium/premium-10.webp" alt=""><div class="meta"><h4>Silk Look 10</h4><p>Lehenga-style luxury finish.</p><div class="price">₹2,000</div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">How it works</div>
+        <h2>Simple, custom, and made for celebrations</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h4>Choose a style</h4><p>Browse Festival Dresses for practical festive shopping, or Premium Silk for luxury inspiration.</p></div>
+        <div class="step"><div class="num">2</div><h4>Select age & notes</h4><p>Pick the age group and share your stitching preferences or special instructions.</p></div>
+        <div class="step"><div class="num">3</div><h4>Confirm your order</h4><p>Checkout is a demo; contact the store to confirm availability and ordering.</p></div>
+        <div class="step"><div class="num">4</div><h4>Celebrate in style</h4><p>Get a beautiful little outfit crafted for birthdays, naming ceremonies, poojas and family functions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="about">
+    <div class="container footer-inner">
+      <div>
+        <div class="brand">
+          <div class="name" style="font-size:24px">Misty Little Threads</div>
+          <div class="tag">Little clothes. Big love.</div>
+        </div>
+        <div class="small">Traditional little outfits for baby girls, thoughtfully styled for Karnataka families.</div>
+      </div>
+      <div class="small">© 2026 Misty Little Threads • Festival Dresses • Premium Silk Dresses</div>
+    </div>
+  </footer>
+
+  <script>
+    let bagCount = 0;
+    function addToBag(){
+      bagCount += 1;
+      document.getElementById('bagCount').textContent = bagCount;
+    }
+  </script>
+</body>
+</html>
